@@ -2,38 +2,41 @@ const body = $('body')
 const button = $('.enter');
 const textInput = $(':input')
 const regex = /[a-zA-z]/
-let tasks = update()
+const button2 = $('.complete');
+const button3 = $('.nukem');
+let tasks = $('.all-tasks')
 
-button.on('click', function(){
-    console.log(regex.test(textInput.val()), 'checked')
-    if(regex.test(textInput.val()) === true){
-        console.log(textInput.val())
-        const newElement = $(`<li class=''>${textInput.val()}</li>`);
-        $('ul.all-tasks').append(newElement);
-        task = update()
-        check()
-        update()
+function addList(input){
+    console.log(regex.test(input), 'checked')
+    if(regex.test(input) === true){
+        console.log(input)
+        const newElement = $(`<li class="incomplete">${input}</li>`);
+        $('.all-tasks').append(newElement);
     }
     else{
         console.log('no')
     }
+    textInput.val(' ')
+}
+
+button.on('click', function(){
+    addList(textInput.val())
 })
 
-
-tasks.each(function() {
-    $(this).click(function(){
-        console.log('clicked')
-        $(this).toggleClass("strike")
-    })
-});
-
-
-function check(){
-    for(let task of tasks){
-        console.log(task)
+textInput.keypress(function(event){
+    if(event.keyCode === 13){
+        addList(textInput.val())
     }
-}
-function update(){
-    return $('li')
-    
-}
+})
+tasks.on('click', 'li',function(){
+        console.log('clicked')
+        $(this).toggleClass("incomplete")
+        $(this).toggleClass("strike")
+})
+
+button2.on('click', function(){
+    $('.strike').remove()
+})
+button3.on('click', function(){
+    tasks.children().remove()
+})

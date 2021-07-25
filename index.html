@@ -8,15 +8,27 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <input type="text" id="task-input">
-    <button class='enter'>
-        click
-    </button>
+    <div class="head">
+        <h1>Todo</h1>
+        <h4>Add to your todo list!</h4>
+    </div>
+    <div class="top-bar">
+        <input type="text" id="task-input">
+        <button class='button enter'>
+            ADD
+        </button>
+        <button class='button complete'>
+            REMOVE COMPLETED TASKS
+        </button>
+        <button class='button nukem'>
+            REMOVE ALL
+        </button>
+    </div>
     <ul class="all-tasks">
-        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, qui111111111111.</li>
+        <!-- <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, qui.</li>
         <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, qui.</li>
         <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, qui.</li>
-        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, qui.</li>
+        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, qui.</li> -->
     </ul>
     <script src="jquery-3.6.0.min.js"></script>
     <script src="main.js"></script>
