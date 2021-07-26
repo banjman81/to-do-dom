@@ -5,6 +5,7 @@ const regex = /[a-zA-z]/
 const button2 = $('.complete');
 const button3 = $('.nukem');
 let tasks = $('.all-tasks')
+const edit = $('.edit')
 
 function addList(input){
     console.log(regex.test(input), 'checked')
@@ -31,11 +32,14 @@ textInput.keypress(function(event){
 tasks.on('click', 'li',function(){
         console.log('clicked')
         $(this).toggleClass("incomplete")
-        $(this).toggleClass("strike")
+        $(this).children('.list-items').toggleClass("strike")
+})
+edit.on('click', function(){
+    console.log('edit this')
 })
 
 button2.on('click', function(){
-    $('.strike').remove()
+    $('.strike').parent().remove()
 })
 button3.on('click', function(){
     tasks.children().remove()

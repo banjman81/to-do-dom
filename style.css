@@ -26,6 +26,7 @@ ul{
     width: 100%;
     overflow: hidden;
     text-overflow: ellipsis; 
+    padding: 5px;
     padding-left: 20px;
     font-size: 25px;
     display: inline-block;
@@ -33,7 +34,7 @@ ul{
     position: relative;
     left: -17px;
 }
-.list{
+/* .list{
     height: 45px;
     display: flex;
     justify-content: space-between;
@@ -47,7 +48,7 @@ ul{
     align-self: center;
     height: 30px;
     margin-right: 10px;
-}
+} */
 .button{
     font-size: 20px;
     color: white;
@@ -84,4 +85,7 @@ ul{
 .complete{
     background-color: rgba(252, 193, 0, 0.856);
     color: black;
+}
+button{
+    text-decoration: none;
 }
