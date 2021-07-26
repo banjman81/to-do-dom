@@ -11,7 +11,7 @@ function addList(input){
     console.log(regex.test(input), 'checked')
     if(regex.test(input) === true){
         console.log(input)
-        const newElement = $(`<li class="incomplete">${input}</li>`);
+        const newElement = $(`<li class="incomplete"><div class='list'><p class="list-items">${input}</p><button class="edit">edit</button></div></li>`);
         $('.all-tasks').append(newElement);
     }
     else{
@@ -32,7 +32,7 @@ textInput.keypress(function(event){
 tasks.on('click', 'li',function(){
         console.log('clicked')
         $(this).toggleClass("incomplete")
-        $(this).children('.list-items').toggleClass("strike")
+        $(this).toggleClass("strike")
 })
 edit.on('click', function(){
     console.log('edit this')

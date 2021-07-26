@@ -26,7 +26,6 @@ ul{
     width: 100%;
     overflow: hidden;
     text-overflow: ellipsis; 
-    padding: 5px;
     padding-left: 20px;
     font-size: 25px;
     display: inline-block;
@@ -34,7 +33,17 @@ ul{
     position: relative;
     left: -17px;
 }
-/* .list{
+.input-text{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+.input-text input{
+    width: 500px;
+    height: 40px;
+    font-size: 25px;
+}
+.list{
     height: 45px;
     display: flex;
     justify-content: space-between;
@@ -48,7 +57,7 @@ ul{
     align-self: center;
     height: 30px;
     margin-right: 10px;
-} */
+}
 .button{
     font-size: 20px;
     color: white;
